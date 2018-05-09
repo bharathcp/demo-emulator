@@ -1,0 +1,45 @@
+buildscript {
+    ext {
+        springBootVersion = '1.5.9.RELEASE'
+        springVersion = '5.0.2.RELEASE'
+        cucumberversion = '1.2.5'
+        groovyVersion = '2.4.10'
+    }
+    repositories {
+        mavenCentral()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath "gradle.plugin.com.gorylenko.gradle-git-properties:gradle-git-properties:1.4.17"
+    }
+}
+
+group 'services.digitalpartner.demo'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'groovy'
+apply plugin: 'org.springframework.boot'
+//apply plugin: "com.gorylenko.gradle-git-properties"
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:2.3.11'
+    compile("org.springframework.boot:spring-boot-starter-web:${springBootVersion}")
+    compile("org.springframework.boot:spring-boot-starter-actuator:${springBootVersion}")
+    compile("io.springfox:springfox-swagger2:2.7.0")
+    compile("io.springfox:springfox-swagger-ui:2.7.0")
+    compile group: 'org.yaml', name: 'snakeyaml', version: '1.19'
+    testCompile("org.springframework.boot:spring-boot-starter-test:${springBootVersion}")
+    //testCompile group: 'junit', name: 'junit', version: '4.11'
+    testCompile project(':demo-harness')
+}
+
+springBoot  {
+    //buildInfo()
+}

@@ -1,0 +1,57 @@
+# Test Data used in requests...
+endpoints:
+  sensitive: false
+  enabled: false
+  info:
+    enabled: true
+  health:
+    enabled: true
+
+mock:
+  data:
+    "Julie":
+      ir_number: "123456789"
+      firstName: "Julie"
+      lastName: "LN"
+      dob: "1995-05-19"
+      phone: "0231231234"
+      bank_account_number: "567567567567"
+      email: "julie.doe@emailprovider.com"
+
+    "Nathan":
+      ir_number: "12345678"
+      firstName: "Nathan"
+      lastName: "Lyon"
+      dob: "1990-05-19"
+      phone: "456456456"
+      bank_account_number: "567567567567"
+      email: "julie.doe@emailprovider.com"
+
+    "MaoriUser":
+      ir_number: "123456780"
+      firstName: "Tēnā"
+      lastName: "Koe"
+      dob: "1999-02-22"
+      phone: "44433355555"
+
+    "SpanishUser":
+      ir_number: "123456781"
+      firstName: "Gran"
+      lastName: "Año"
+      dob: "1988-08-08"
+      email: "gr.a@test.com"
+
+    "FrenchUser":
+      ir_number: "123456782"
+      firstName: "Bonne"
+      lastName: "Année"
+      dob: "2000-01-11"
+      phone: "+33405060708"
+
+    "GermanUser":
+      ir_number: "123456783"
+      firstName: "außer"
+      lastName: "Haus"
+      dob: "1977-05-15"
+      bank_account_number: "1288887777777000"
+
